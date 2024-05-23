@@ -1,30 +1,23 @@
-
 package com.mycompany.ejercicio3;
 
-class Libros {
-    String nombre;
-    String valor;
-    int tiempo;
-    public Libros(String nombre, String valor,int tiempo) {
-        this.nombre = nombre;
-        this.valor = valor;
-        this.tiempo=tiempo;
+public class Libros {
+    private String titulo;
+    private int precioPorDia;
+
+    public Libros(String titulo, int precioPorDia) {
+        this.titulo = titulo;
+        this.precioPorDia = precioPorDia;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public String getValor() {
-        return valor;
+    public int getPrecioPorDia() {
+        return precioPorDia;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public int calcularCosto(int dias) {
+        return dias * precioPorDia;
     }
-
-    public void setValor(String valor) {
-        this.valor = valor;
-    }
-    
 }
